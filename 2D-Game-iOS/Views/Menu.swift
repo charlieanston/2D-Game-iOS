@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Menu: View {
-//    @Binding var active: Bool
+    var flag: Int = 0
     var body: some View {
         ZStack{
             VStack(spacing: 20){
@@ -16,18 +16,18 @@ struct Menu: View {
                 Spacer()
 
 
-//                Button(action: {
-//                    active = false
-//                }, label: {
-//                    Capsule()
-//                      .fill(Color.white.opacity(0.2))
-//                      .padding(8)
-//                      .frame(height:80)
-//                      .overlay(Text("Get Started")
-//                        .font(.system(.title3, design: .rounded))
-//                        .fontWeight(.bold)
-//                        .foregroundColor(.white))
-//                })
+                Button(action: {
+                    flag = 1
+                }, label: {
+                    Capsule()
+                      .fill(Color.white.opacity(0.2))
+                      .padding(8)
+                      .frame(height:80)
+                      .overlay(Text("Get Started")
+                        .font(.system(.title3, design: .rounded))
+                        .fontWeight(.bold)
+                        .foregroundColor(.white))
+                })
             }
         }
         .background(
