@@ -13,10 +13,9 @@ struct WelcomeView: View {
         ZStack {
             if isWelcomeActive {
                 GreetingView(active: $isWelcomeActive)
+            } else {
+                Menu()
             }
-//            else {
-//                CompanyList()
-//            }
         }
     }
 }
