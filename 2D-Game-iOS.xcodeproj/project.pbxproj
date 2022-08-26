@@ -14,6 +14,9 @@
 		2B3DE7EE28B8933C00A2DAD2 /* _D_Game_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3DE7ED28B8933C00A2DAD2 /* _D_Game_iOSTests.swift */; };
 		2B3DE7F828B8933C00A2DAD2 /* _D_Game_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3DE7F728B8933C00A2DAD2 /* _D_Game_iOSUITests.swift */; };
 		2B3DE7FA28B8933C00A2DAD2 /* _D_Game_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3DE7F928B8933C00A2DAD2 /* _D_Game_iOSUITestsLaunchTests.swift */; };
+		2B3DE80A28B89CB700A2DAD2 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3DE80928B89CB700A2DAD2 /* WelcomeView.swift */; };
+		2B3DE80C28B89D1800A2DAD2 /* GreetingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3DE80B28B89D1800A2DAD2 /* GreetingView.swift */; };
+		2B3DE80F28B89D6D00A2DAD2 /* ColorConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3DE80E28B89D6D00A2DAD2 /* ColorConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,10 @@
 		2B3DE7F328B8933C00A2DAD2 /* 2D-Game-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "2D-Game-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B3DE7F728B8933C00A2DAD2 /* _D_Game_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _D_Game_iOSUITests.swift; sourceTree = "<group>"; };
 		2B3DE7F928B8933C00A2DAD2 /* _D_Game_iOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _D_Game_iOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2B3DE80628B897E900A2DAD2 /* -D-Game-iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "-D-Game-iOS-Info.plist"; sourceTree = SOURCE_ROOT; };
+		2B3DE80928B89CB700A2DAD2 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		2B3DE80B28B89D1800A2DAD2 /* GreetingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingView.swift; sourceTree = "<group>"; };
+		2B3DE80E28B89D6D00A2DAD2 /* ColorConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +101,10 @@
 		2B3DE7DB28B8933B00A2DAD2 /* 2D-Game-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				2B3DE80D28B89D5800A2DAD2 /* Model */,
+				2B3DE80728B89BEF00A2DAD2 /* Views */,
+				2B3DE80628B897E900A2DAD2 /* -D-Game-iOS-Info.plist */,
 				2B3DE7DC28B8933B00A2DAD2 /* _D_Game_iOSApp.swift */,
-				2B3DE7DE28B8933B00A2DAD2 /* ContentView.swift */,
 				2B3DE7E028B8933C00A2DAD2 /* Assets.xcassets */,
 				2B3DE7E228B8933C00A2DAD2 /* Preview Content */,
 			);
@@ -125,6 +134,32 @@
 				2B3DE7F928B8933C00A2DAD2 /* _D_Game_iOSUITestsLaunchTests.swift */,
 			);
 			path = "2D-Game-iOSUITests";
+			sourceTree = "<group>";
+		};
+		2B3DE80728B89BEF00A2DAD2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2B3DE80828B89C7400A2DAD2 /* Welcome */,
+				2B3DE7DE28B8933B00A2DAD2 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2B3DE80828B89C7400A2DAD2 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				2B3DE80928B89CB700A2DAD2 /* WelcomeView.swift */,
+				2B3DE80B28B89D1800A2DAD2 /* GreetingView.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		2B3DE80D28B89D5800A2DAD2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2B3DE80E28B89D6D00A2DAD2 /* ColorConstants.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +293,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B3DE7DF28B8933B00A2DAD2 /* ContentView.swift in Sources */,
+				2B3DE80C28B89D1800A2DAD2 /* GreetingView.swift in Sources */,
+				2B3DE80A28B89CB700A2DAD2 /* WelcomeView.swift in Sources */,
+				2B3DE80F28B89D6D00A2DAD2 /* ColorConstants.swift in Sources */,
 				2B3DE7DD28B8933B00A2DAD2 /* _D_Game_iOSApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,9 +457,9 @@
 				DEVELOPMENT_ASSET_PATHS = "\"2D-Game-iOS/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "-D-Game-iOS-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -447,9 +485,9 @@
 				DEVELOPMENT_ASSET_PATHS = "\"2D-Game-iOS/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "-D-Game-iOS-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
