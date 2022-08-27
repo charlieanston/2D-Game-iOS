@@ -17,7 +17,6 @@ struct Menu: View {
 
 
                 Button(action: {
-                    flag = 1
                 }, label: {
                     Capsule()
                       .fill(Color.white.opacity(0.2))

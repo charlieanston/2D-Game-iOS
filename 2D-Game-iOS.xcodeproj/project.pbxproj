@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2B3DE7DD28B8933B00A2DAD2 /* _D_Game_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3DE7DC28B8933B00A2DAD2 /* _D_Game_iOSApp.swift */; };
+		0C85820728BA14F10072E94D /* _D-Game-iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C85820628BA14F10072E94D /* _D-Game-iOSApp.swift */; };
 		2B3DE7DF28B8933B00A2DAD2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3DE7DE28B8933B00A2DAD2 /* ContentView.swift */; };
 		2B3DE7E128B8933C00A2DAD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B3DE7E028B8933C00A2DAD2 /* Assets.xcassets */; };
 		2B3DE7E428B8933C00A2DAD2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B3DE7E328B8933C00A2DAD2 /* Preview Assets.xcassets */; };
@@ -38,8 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C85820628BA14F10072E94D /* _D-Game-iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "_D-Game-iOSApp.swift"; sourceTree = "<group>"; };
 		2B3DE7D928B8933B00A2DAD2 /* 2D-Game-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "2D-Game-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2B3DE7DC28B8933B00A2DAD2 /* _D_Game_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _D_Game_iOSApp.swift; sourceTree = "<group>"; };
 		2B3DE7DE28B8933B00A2DAD2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2B3DE7E028B8933C00A2DAD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B3DE7E328B8933C00A2DAD2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 		2B3DE7F328B8933C00A2DAD2 /* 2D-Game-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "2D-Game-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B3DE7F728B8933C00A2DAD2 /* _D_Game_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _D_Game_iOSUITests.swift; sourceTree = "<group>"; };
 		2B3DE7F928B8933C00A2DAD2 /* _D_Game_iOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _D_Game_iOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		2B3DE80628B897E900A2DAD2 /* -D-Game-iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "-D-Game-iOS-Info.plist"; sourceTree = SOURCE_ROOT; };
+		2B3DE80628B897E900A2DAD2 /* _D-Game-iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "_D-Game-iOS-Info.plist"; sourceTree = SOURCE_ROOT; };
 		2B3DE80928B89CB700A2DAD2 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		2B3DE80B28B89D1800A2DAD2 /* GreetingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingView.swift; sourceTree = "<group>"; };
 		2B3DE80E28B89D6D00A2DAD2 /* ColorConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConstants.swift; sourceTree = "<group>"; };
@@ -105,10 +105,10 @@
 			children = (
 				2B3DE80D28B89D5800A2DAD2 /* Model */,
 				2B3DE80728B89BEF00A2DAD2 /* Views */,
-				2B3DE80628B897E900A2DAD2 /* -D-Game-iOS-Info.plist */,
-				2B3DE7DC28B8933B00A2DAD2 /* _D_Game_iOSApp.swift */,
+				2B3DE80628B897E900A2DAD2 /* _D-Game-iOS-Info.plist */,
 				2B3DE7E028B8933C00A2DAD2 /* Assets.xcassets */,
 				2B3DE7E228B8933C00A2DAD2 /* Preview Content */,
+				0C85820628BA14F10072E94D /* _D-Game-iOSApp.swift */,
 			);
 			path = "2D-Game-iOS";
 			sourceTree = "<group>";
@@ -300,7 +300,7 @@
 				2B3DE80C28B89D1800A2DAD2 /* GreetingView.swift in Sources */,
 				2B3DE80A28B89CB700A2DAD2 /* WelcomeView.swift in Sources */,
 				2B3DE80F28B89D6D00A2DAD2 /* ColorConstants.swift in Sources */,
-				2B3DE7DD28B8933B00A2DAD2 /* _D_Game_iOSApp.swift in Sources */,
+				0C85820728BA14F10072E94D /* _D-Game-iOSApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

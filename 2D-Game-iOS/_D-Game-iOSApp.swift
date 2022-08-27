@@ -1,5 +1,5 @@
 //
-//  _D_Game_iOSApp.swift
+//  2D_Game_iOSApp.swift
 //  2D-Game-iOS
 //
 //  Created by Hung Le Tran Trong on 26/08/2022.
