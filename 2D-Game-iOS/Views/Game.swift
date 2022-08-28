@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Game: View {
     // MARK: - PROPERTIES
-    let icons = ["apple","bar","bell","cherry","clover","diamond", "grape", "heart", "horseshoe","lemon","melon","money","orange"]
+    let icons = ["andesaurus","baryonyx","brachiosaurus","brontosaurus","carnotaurus","coelophysis", "diplodocus", "gallimimus", "lirainosaurus","raptor","stegosaurus","styracosaurus","triceratops"]
     
     let haptics = UINotificationFeedbackGenerator()
     
@@ -168,14 +168,20 @@ struct Game: View {
     var body: some View {
         ZStack {
             // MARK: - BACKGROUND
-            LinearGradient(gradient: Gradient(colors: [Color("ColorRedRMIT"), Color("ColorBrightPurpleRMIT")]), startPoint: .top, endPoint: .bottom)
-                .edgesIgnoringSafeArea(.all)
+            LinearGradient(
+                colors: [
+                    ColorConstants.froly,
+                    ColorConstants.ceriseRed
+                ],
+                startPoint: .top,
+                endPoint: .bottom)
+            .ignoresSafeArea()
             
             
             // MARK: - GAME UI
             VStack {
                 // MARK: - LOGO HEADER
-                LogoView(logoFileName: "rmit-casino-welcome-logo")
+                LogoView(logoFileName: "slot-machine")
                 Spacer()
                 
                 // MARK: - SCORE
@@ -205,23 +211,24 @@ struct Game: View {
                 
                 // MARK: - SLOT MACHINE
                 VStack{
-                    
-                    // MARK: - FIRST REEL
-                    ZStack{
-                        ReelView()
-                        Image(icons[reels[0]])
-                            .resizable()
-                            .modifier(IconImageModifier())
-                            .opacity(animatingIcon ? 1 : 0)
-                            .offset(y: animatingIcon ? 0 : -50)
-                            .animation(.easeOut(duration: Double.random(in: 0.5...0.7)), value: animatingIcon)
-                            .onAppear(perform: {
-                                self.animatingIcon.toggle()
-                                playSound(sound: "blink", type: "mp3")
-                            })
-                
-                    }
                     HStack{
+                        // MARK: - FIRST REEL
+                        ZStack{
+                            ReelView()
+                            Image(icons[reels[0]])
+                                .resizable()
+                                .modifier(IconImageModifier())
+                                .opacity(animatingIcon ? 1 : 0)
+                                .offset(y: animatingIcon ? 0 : -50)
+                                .animation(.easeOut(duration: Double.random(in: 0.5...0.7)), value: animatingIcon)
+                                .onAppear(perform: {
+                                    self.animatingIcon.toggle()
+                                    playSound(sound: "blink", type: "mp3")
+                                })
+                    
+                        }
+                        
+                        Spacer()
                         
                         // MARK: - SECOND REEL
                         ZStack{
@@ -244,6 +251,57 @@ struct Game: View {
                         ZStack{
                             ReelView()
                             Image(icons[reels[2]])
+                                .resizable()
+                                .modifier(IconImageModifier())
+                                .opacity(animatingIcon ? 1 : 0)
+                                .offset(y: animatingIcon ? 0 : -50)
+                                .animation(.easeOut(duration: Double.random(in: 0.9...1.1)), value: animatingIcon)
+                                .onAppear(perform: {
+                                    self.animatingIcon.toggle()
+                                    playSound(sound: "blink", type: "mp3")
+                                })
+                        }
+                    }
+                    
+                    HStack{
+                        // MARK: - FOURTH REEL
+                        ZStack{
+                            ReelView()
+                            Image(icons[reels[3]])
+                                .resizable()
+                                .modifier(IconImageModifier())
+                                .opacity(animatingIcon ? 1 : 0)
+                                .offset(y: animatingIcon ? 0 : -50)
+                                .animation(.easeOut(duration: Double.random(in: 0.9...1.1)), value: animatingIcon)
+                                .onAppear(perform: {
+                                    self.animatingIcon.toggle()
+                                    playSound(sound: "blink", type: "mp3")
+                                })
+                        }
+                        
+                        Spacer()
+                        
+                        // MARK: - FIFTH REEL
+                        ZStack{
+                            ReelView()
+                            Image(icons[reels[4]])
+                                .resizable()
+                                .modifier(IconImageModifier())
+                                .opacity(animatingIcon ? 1 : 0)
+                                .offset(y: animatingIcon ? 0 : -50)
+                                .animation(.easeOut(duration: Double.random(in: 0.9...1.1)), value: animatingIcon)
+                                .onAppear(perform: {
+                                    self.animatingIcon.toggle()
+                                    playSound(sound: "blink", type: "mp3")
+                                })
+                        }
+                        
+                        Spacer()
+                        
+                        // MARK: - SIXTH REEL
+                        ZStack{
+                            ReelView()
+                            Image(icons[reels[5]])
                                 .resizable()
                                 .modifier(IconImageModifier())
                                 .opacity(animatingIcon ? 1 : 0)
@@ -292,27 +350,6 @@ struct Game: View {
                 HStack{
                     
                     HStack{
-                        
-                        // MARK: - BET 20 BUTTON
-                        Button {
-                            self.chooseBet20()
-                        } label: {
-                            HStack(spacing: 30){
-                                Text("20")
-                                    .foregroundColor(isChooseBet20 ? Color("ColorBlueRMIT") : Color.white)
-                                    .modifier(BetCapsuleModifier())
-                               Image("casino-chips")
-                                    .resizable()
-                                    .offset(x: isChooseBet20 ? 0 : 20)
-                                    .opacity(isChooseBet20 ? 1 : 0 )
-                                    .modifier(CasinoChipModifier())
-                                    .animation(.default, value: isChooseBet20)
-                            }
-                            .padding(.horizontal, 20)
-                        }
-                        
-                        Spacer()
-                        
                         // MARK: - BET 10 BUTTON
                         Button {
                             self.chooseBet10()
@@ -325,12 +362,54 @@ struct Game: View {
                                      .modifier(CasinoChipModifier())
                                      .animation(.default, value: isChooseBet20)
                                 Text("10")
-                                    .foregroundColor(isChooseBet10 ? Color("ColorBlueRMIT") : Color.white)
+                                    .foregroundColor(isChooseBet10 ? ColorConstants.easternBlue : Color.white)
                                     .modifier(BetCapsuleModifier())
                                
                             }
                             .padding(.horizontal, 20)
                         }
+                        
+                        Spacer()
+                        
+                        // MARK: - BET 50 BUTTON
+                        Button {
+                            self.chooseBet50()
+                        } label: {
+                            HStack(spacing: 30){
+                                Text("20")
+                                    .foregroundColor(isChooseBet50 ? ColorConstants.easternBlue : Color.white)
+                                    .modifier(BetCapsuleModifier())
+                               Image("casino-chips")
+                                    .resizable()
+                                    .offset(x: isChooseBet50 ? 0 : 20)
+                                    .opacity(isChooseBet50 ? 1 : 0 )
+                                    .modifier(CasinoChipModifier())
+                                    .animation(.default, value: isChooseBet50)
+                            }
+                            .padding(.horizontal, 20)
+                        }
+                        
+                        Spacer()
+                        
+                        // MARK: - BET 100 BUTTON
+                        Button {
+                            self.chooseBet100()
+                        } label: {
+                            HStack(spacing: 30){
+                                Image("casino-chips")
+                                     .resizable()
+                                     .offset(x: isChooseBet100 ? 0 : -20)
+                                     .opacity(isChooseBet100 ? 1 : 0 )
+                                     .modifier(CasinoChipModifier())
+                                     .animation(.default, value: isChooseBet100)
+                                Text("10")
+                                    .foregroundColor(isChooseBet100 ? ColorConstants.easternBlue : Color.white)
+                                    .modifier(BetCapsuleModifier())
+                               
+                            }
+                            .padding(.horizontal, 20)
+                        }
+                        
                     }
                     
                 }
