@@ -2,7 +2,7 @@
 //  Game.swift
 //  2D-Game-iOS
 //
-//  Created by Kim Yoko on 28/08/2022.
+//  Created by Hung Le on 28/08/2022.
 //
 
 import SwiftUI
@@ -20,7 +20,6 @@ struct Game: View {
     
     @State private var isChooseBet10 = true
     @State private var isChooseBet50 = false
-    @State private var isChooseBet100 = false
     
     @State private var showingInfoView = false
     @State private var showGameOverModal = false
@@ -86,15 +85,15 @@ struct Game: View {
     
     // MARK: - PLAYER WIN LOGIC
     func playerWins1() {
-        coins += betAmount * 2
+        coins += betAmount * 3
         playSound(sound: "winning", type: "mp3")
     }
     func playerWins2() {
-        coins += betAmount * 4
+        coins += betAmount * 6
         playSound(sound: "winning", type: "mp3")
     }
     func playerWins3() {
-        coins += betAmount * 8
+        coins += betAmount * 10
         playSound(sound: "winning", type: "mp3")
     }
     func playerWins4() {
@@ -115,7 +114,7 @@ struct Game: View {
     
     // MARK: - PLAYER LOSE LOGIC
     func playLoses() {
-        coins -= betAmount * 5
+        coins -= betAmount
     }
     
     // MARK: - BET 10 LOGIC
@@ -123,25 +122,14 @@ struct Game: View {
         betAmount = 10
         isChooseBet10 = true
         isChooseBet50 = false
-        isChooseBet100 = false
         playSound(sound: "bet-chip", type: "mp3")
     }
     
     // MARK: - BET 50 LOGIC
     func chooseBet50() {
-        betAmount = 20
+        betAmount = 50
         isChooseBet10 = false
         isChooseBet50 = true
-        isChooseBet100 = false
-        playSound(sound: "bet-chip", type: "mp3")
-    }
-    
-    // MARK: - BET 100 LOGIC
-    func chooseBet100() {
-        betAmount = 20
-        isChooseBet10 = false
-        isChooseBet50 = false
-        isChooseBet100 = true
         playSound(sound: "bet-chip", type: "mp3")
     }
     
@@ -175,7 +163,7 @@ struct Game: View {
                 ],
                 startPoint: .top,
                 endPoint: .bottom)
-            .ignoresSafeArea()
+            .edgesIgnoringSafeArea(.all)
             
             
             // MARK: - GAME UI
@@ -227,9 +215,7 @@ struct Game: View {
                                 })
                     
                         }
-                        
-                        Spacer()
-                        
+                                                
                         // MARK: - SECOND REEL
                         ZStack{
                             ReelView()
@@ -244,9 +230,9 @@ struct Game: View {
                                     playSound(sound: "blink", type: "mp3")
                                 })
                         }
-                        
-                        Spacer()
-                        
+                    }
+                    
+                    HStack{
                         // MARK: - THIRD REEL
                         ZStack{
                             ReelView()
@@ -261,9 +247,7 @@ struct Game: View {
                                     playSound(sound: "blink", type: "mp3")
                                 })
                         }
-                    }
-                    
-                    HStack{
+                        
                         // MARK: - FOURTH REEL
                         ZStack{
                             ReelView()
@@ -278,9 +262,9 @@ struct Game: View {
                                     playSound(sound: "blink", type: "mp3")
                                 })
                         }
-                        
-                        Spacer()
-                        
+                    }
+                    
+                    HStack{
                         // MARK: - FIFTH REEL
                         ZStack{
                             ReelView()
@@ -295,9 +279,7 @@ struct Game: View {
                                     playSound(sound: "blink", type: "mp3")
                                 })
                         }
-                        
-                        Spacer()
-                        
+                                                
                         // MARK: - SIXTH REEL
                         ZStack{
                             ReelView()
@@ -350,36 +332,15 @@ struct Game: View {
                 HStack{
                     
                     HStack{
-                        // MARK: - BET 10 BUTTON
-                        Button {
-                            self.chooseBet10()
-                        } label: {
-                            HStack(spacing: 30){
-                                Image("casino-chips")
-                                     .resizable()
-                                     .offset(x: isChooseBet10 ? 0 : -20)
-                                     .opacity(isChooseBet10 ? 1 : 0 )
-                                     .modifier(CasinoChipModifier())
-                                     .animation(.default, value: isChooseBet20)
-                                Text("10")
-                                    .foregroundColor(isChooseBet10 ? ColorConstants.easternBlue : Color.white)
-                                    .modifier(BetCapsuleModifier())
-                               
-                            }
-                            .padding(.horizontal, 20)
-                        }
-                        
-                        Spacer()
-                        
                         // MARK: - BET 50 BUTTON
                         Button {
                             self.chooseBet50()
                         } label: {
                             HStack(spacing: 30){
-                                Text("20")
-                                    .foregroundColor(isChooseBet50 ? ColorConstants.easternBlue : Color.white)
+                                Text("50")
+                                    .foregroundColor(isChooseBet50 ? ColorConstants.ceriseRed : Color.white)
                                     .modifier(BetCapsuleModifier())
-                               Image("casino-chips")
+                               Image("money-bag")
                                     .resizable()
                                     .offset(x: isChooseBet50 ? 0 : 20)
                                     .opacity(isChooseBet50 ? 1 : 0 )
@@ -391,19 +352,19 @@ struct Game: View {
                         
                         Spacer()
                         
-                        // MARK: - BET 100 BUTTON
+                        // MARK: - BET 10 BUTTON
                         Button {
-                            self.chooseBet100()
+                            self.chooseBet10()
                         } label: {
                             HStack(spacing: 30){
-                                Image("casino-chips")
+                                Image("money-bag")
                                      .resizable()
-                                     .offset(x: isChooseBet100 ? 0 : -20)
-                                     .opacity(isChooseBet100 ? 1 : 0 )
+                                     .offset(x: isChooseBet10 ? 0 : -20)
+                                     .opacity(isChooseBet10 ? 1 : 0 )
                                      .modifier(CasinoChipModifier())
-                                     .animation(.default, value: isChooseBet100)
+                                     .animation(.default, value: isChooseBet50)
                                 Text("10")
-                                    .foregroundColor(isChooseBet100 ? ColorConstants.easternBlue : Color.white)
+                                    .foregroundColor(isChooseBet10 ? ColorConstants.ceriseRed : Color.white)
                                     .modifier(BetCapsuleModifier())
                                
                             }
@@ -450,7 +411,7 @@ struct Game: View {
             // MARK: - GAMEOVER MODAL
             if showGameOverModal{
                 ZStack{
-                    Color("ColorBlackTransparent")
+                    ColorConstants.morningGlory
                         .edgesIgnoringSafeArea(.all)
                     VStack{
                         Text("GAME OVER")
@@ -459,12 +420,12 @@ struct Game: View {
                             .foregroundColor(Color.white)
                             .padding()
                             .frame(minWidth: 280, idealWidth: 280, maxWidth: 320)
-                            .background(Color("ColorRedRMIT"))
+                            .background(ColorConstants.ceriseRed)
                         
                         Spacer()
                         
                         VStack {
-                            Image("rmit-casino-logo")
+                            Image("slot-machine")
                                 .resizable()
                                 .scaledToFit()
                                 .frame(maxHeight: 150)
@@ -483,14 +444,14 @@ struct Game: View {
                             .background(
                                 Capsule()
                                     .strokeBorder(lineWidth: 2)
-                                    .foregroundColor(Color("ColorRedRMIT"))
+                                    .foregroundColor(ColorConstants.ceriseRed)
                             )
 
                         }
                         Spacer()
                     }
                     .frame(minWidth: 280, idealWidth: 280, maxWidth: 320, minHeight: 280, idealHeight: 300, maxHeight: 350, alignment: .center)
-                    .background(Color("ColorBlueRMIT"))
+                    .background(ColorConstants.easternBlue)
                     .cornerRadius(20)
                 }.onAppear(perform: {
                     playSound(sound: "drum-music", type: "mp3")
@@ -503,9 +464,9 @@ struct Game: View {
 }
 
 // MARK: - PREVIEW
-struct ContentView_Previews: PreviewProvider {
+struct Game_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Game()
     }
 }
 

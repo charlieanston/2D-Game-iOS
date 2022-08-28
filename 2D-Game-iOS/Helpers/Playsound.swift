@@ -2,7 +2,7 @@
 //  PlaySound.swift
 //  2D-Game-iOS
 //
-//  Created by Kim Yoko on 28/08/2022.
+//  Created by Hung Le on 28/08/2022.
 //
 
 import AVFoundation

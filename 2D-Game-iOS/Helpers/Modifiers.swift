@@ -2,7 +2,7 @@
 //  Modifiers.swift
 //  2D-Game-iOS
 //
-//  Created by Kim Yoko on 28/08/2022.
+//  Created by Hung Le on 28/08/2022.
 //
 
 import SwiftUI
@@ -78,7 +78,7 @@ struct BetCapsuleModifier: ViewModifier{
             .font(.system(size: 25, weight: .heavy, design: .rounded))
             .modifier(ShadowModifier())
             .background(
-                Capsule().fill(LinearGradient(gradient: Gradient(colors: [Color("ColorYellowRMIT"), Color("ColorRedRMIT")]), startPoint: .bottom, endPoint: .top))
+                Capsule().fill(LinearGradient(gradient: Gradient(colors: [ColorConstants.easternBlue, ColorConstants.morningGlory]), startPoint: .bottom, endPoint: .top))
                     .frame(width: 80, height: 50, alignment: .center)
             )
     }

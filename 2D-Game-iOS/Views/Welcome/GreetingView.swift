@@ -2,7 +2,7 @@
 //  GreetingView.swift
 //  GameCompaniesList
 //
-//  Created by Hung Le Tran Trong on 26/08/2022.
+//  Created by Hung Le on 26/08/2022.
 //
 
 import SwiftUI
@@ -57,7 +57,7 @@ struct GreetingView: View {
                 ],
                 startPoint: .top,
                 endPoint: .bottom)
-            .ignoresSafeArea()
+            .edgesIgnoringSafeArea(.all)
         )
     }
 }
