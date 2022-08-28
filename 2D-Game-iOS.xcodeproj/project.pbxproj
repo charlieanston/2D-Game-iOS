@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C185BFF28BAD87C00B9C866 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C185BFE28BAD87C00B9C866 /* Game.swift */; };
+		0C185C0428BAF9E700B9C866 /* PlaySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C185C0328BAF9E700B9C866 /* PlaySound.swift */; };
+		0C185C0628BAFA0F00B9C866 /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C185C0528BAFA0F00B9C866 /* Modifiers.swift */; };
 		0C85820728BA14F10072E94D /* _D-Game-iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C85820628BA14F10072E94D /* _D-Game-iOSApp.swift */; };
 		2B3DE7DF28B8933B00A2DAD2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3DE7DE28B8933B00A2DAD2 /* ContentView.swift */; };
 		2B3DE7E128B8933C00A2DAD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B3DE7E028B8933C00A2DAD2 /* Assets.xcassets */; };
@@ -38,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C185BFE28BAD87C00B9C866 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		0C185C0328BAF9E700B9C866 /* PlaySound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySound.swift; sourceTree = "<group>"; };
+		0C185C0528BAFA0F00B9C866 /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
 		0C85820628BA14F10072E94D /* _D-Game-iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "_D-Game-iOSApp.swift"; sourceTree = "<group>"; };
 		2B3DE7D928B8933B00A2DAD2 /* 2D-Game-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "2D-Game-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B3DE7DE28B8933B00A2DAD2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -80,6 +86,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C185C0028BAF9BE00B9C866 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0C185C0328BAF9E700B9C866 /* PlaySound.swift */,
+				0C185C0528BAFA0F00B9C866 /* Modifiers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		2B3DE7D028B8933B00A2DAD2 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +118,7 @@
 		2B3DE7DB28B8933B00A2DAD2 /* 2D-Game-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				0C185C0028BAF9BE00B9C866 /* Helpers */,
 				2B3DE80D28B89D5800A2DAD2 /* Model */,
 				2B3DE80728B89BEF00A2DAD2 /* Views */,
 				2B3DE80628B897E900A2DAD2 /* _D-Game-iOS-Info.plist */,
@@ -144,6 +160,7 @@
 				2B3DE80828B89C7400A2DAD2 /* Welcome */,
 				2B3DE7DE28B8933B00A2DAD2 /* ContentView.swift */,
 				2B3DE81028B8A0D900A2DAD2 /* Menu.swift */,
+				0C185BFE28BAD87C00B9C866 /* Game.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -296,10 +313,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B3DE81128B8A0D900A2DAD2 /* Menu.swift in Sources */,
+				0C185C0428BAF9E700B9C866 /* PlaySound.swift in Sources */,
 				2B3DE7DF28B8933B00A2DAD2 /* ContentView.swift in Sources */,
+				0C185BFF28BAD87C00B9C866 /* Game.swift in Sources */,
 				2B3DE80C28B89D1800A2DAD2 /* GreetingView.swift in Sources */,
 				2B3DE80A28B89CB700A2DAD2 /* WelcomeView.swift in Sources */,
 				2B3DE80F28B89D6D00A2DAD2 /* ColorConstants.swift in Sources */,
+				0C185C0628BAFA0F00B9C866 /* Modifiers.swift in Sources */,
 				0C85820728BA14F10072E94D /* _D-Game-iOSApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
